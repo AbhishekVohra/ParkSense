@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <div class="booking-info">
+                <h1>Booking Confirmation</h1>
+                <div class="top-note">
+                    <p>Reminder: Please keep this confirmation for your records.</p>
+                    <p>It includes important information about your booking.</p>
+                </div>
+                <br>
+                <p>Slot Number: <span id="slotNumber"></span></p>
+                <p>Username: <span id="username"></span></p>
+                <p>Booking Time: <span id="bookingTime"></span></p>
+                <br>
+                <div class="thank-you">
+                    <p>Thanks for using our app, ParkSense!</p>
+                    <p>We're here to make your parking experience easier and more efficient.</p>
+                </div>
+                <button onclick="reportIssue()">Report Issue</button>    
+            </div>
+            
+            <div class="image-container">
+                <img src="static.jpg" alt="Static Image">
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById('slotNumber').textContent = params.get('slot');
+            document.getElementById('username').textContent = params.get('user');
+            document.getElementById('bookingTime').textContent = params.get('time');
+        };
+
+        function reportIssue() {
+            // Display the pop-up message
+            alert("Report received. We appreciate you bringing this to our attention. Our staff will investigate and act swiftly to resolve the issue to your satisfaction.");
+
+            // Redirect to index.html
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

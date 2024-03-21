@@ -1,0 +1,182 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+    overflow: hidden; /* Ensures no scrolling with absolute positioning */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('background.jpg') no-repeat center center; /* Replace with your image path */
+    background-size: cover; /* Cover the entire area */
+    opacity: 0.25; /* 50% opacity */
+    z-index: -1; /* Ensure it's behind the content */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Keep elements stacked vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 2; /* Ensure container is above the pseudo-element */
+}
+
+h1 {
+    margin-bottom: 40px; /* Space below the heading */
+}
+
+.login-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
+    text-align: center;
+    padding: 40px;
+}
+
+.login-box h2 {
+    margin-bottom: 24px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    /* padding: 12px; */
+    padding: 15px; /* Larger padding */
+    margin: 8px 0;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    border: 1px solid #ddd; /* Softer border color */
+    border-radius: 20px; /* Rounded corners */
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#parkingImage {
+    margin-bottom: 50px; /* Increase gap between image and booking section */
+}
+
+.booking-section {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between instruction and input field */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.booking-info {
+    border: 3px double #000; /* Double border with black color */
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 80px; 
+    text-align: center; /* Center the text inside the box */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.booking-info h1 {
+    text-align: center;
+}
+
+.booking-info p {
+    font-size: 20px; /* Adjust the font size as needed */
+}
+
+.booking-info span {
+    font-weight: bold; /* Makes the text bold */
+    font-size: 22px; /* Increase font size as needed */
+}
+
+/* New styles for the content and image-container */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 1200px; /* Maximum width */
+    margin: auto;
+}
+
+.image-container img {
+    width: 600px; /* Increased width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: for rounded corners */
+    margin-left: 20px; 
+}
+
+.booking-instruction {
+    font-size: 27px; /* Adjust the size as needed */
+    /* Add any other styling you want here, like font-weight, color, etc. */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#parkingSlot {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px; 
+    margin-left: 200px; 
+    /* Add any additional styles you want */
+}
+
+.action-button {
+    width: 200px; /* Decrease this value as needed */
+    padding: 14px 20px;
+    margin: 8px 0;
+    /* Rest of your button styles... */
+}
+
+.action-button {
+    width: 150px; /* Existing width */
+    padding: 20px 20px; /* Increase vertical padding */
+    height: 90px; /* Set a fixed height */
+    margin: 8px 0;
+    font-size: 22px;
+    font-weight: bold;
+    /* Rest of your button styles... */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+select,
+button {
+    width: 100%; /* Decrease this value as needed */
+    padding: 15px; /* Existing padding */
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ddd; /* Existing border style */
+    border-radius: 20px; /* Existing border radius */
+    box-sizing: border-box;
+    font-size: 20px; /* Existing font size */
+}
+

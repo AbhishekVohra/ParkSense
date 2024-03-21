@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parking Lot App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to ParkSense!</h1>
+        <div id="loginForm" class="login-box">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username" autocomplete="off">
+            <input type="password" id="password" placeholder="Password" autocomplete="off">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+
+        <div id="dashboard" style="display:none;">
+            <img id="parkingImage" src="parking_status.jpg" alt="Parking Status">
+            <div class="booking-section">
+                <div class="booking-instruction">Please Enter the slot number that you want to book:</div>
+                <input type="number" id="parkingSlot" placeholder="" min="1" max="69">
+            </div>
+            <button class="action-button" onclick="bookSlot()">Book</button>
+            <button class="action-button" onclick="refreshParkingStatus()">Refresh</button>
+            <!-- <button class="action-button" onclick="refreshParkingStatus()">Report</button> -->
+        </div>
+    </div>
+
+</body>
+</html>
